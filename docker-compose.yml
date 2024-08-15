@@ -8,17 +8,14 @@ services:
     depends_on:
       - backend
     environment:
-      - REACT_APP_API_URL=http://backend:8000
+      - REACT_APP_API_URL=http://3.111.175.69:8000
     networks:
-      - devops-01_backend_network
+      - backend_network
 
   backend:
     build: ./backend_01
     ports:
       - "8000:8000"
     networks:
-      - devops-01_backend_network
+      - backend_network
 
-networks:
-  devops-01_backend_network:
-    driver: bridge
