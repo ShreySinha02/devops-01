@@ -18,6 +18,7 @@ services:
       - "8000:8000"
     networks:
       - backend_network
-  networks:
-    backend_network:
-      driver: bridge
+
+networks:
+  backend_network:
+    driver: bridge
