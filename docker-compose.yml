@@ -10,14 +10,14 @@ services:
     environment:
       - REACT_APP_API_URL=http://backend:8000
     networks:
-      - backend_network
+      - devops-01_backend_network
 
   backend:
     build: ./backend_01
     ports:
       - "8000:8000"
     networks:
-      - backend_network
+      - devops-01_backend_network
 
 networks:
   backend_network:
