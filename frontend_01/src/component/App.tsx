@@ -36,9 +36,10 @@ function App() {
       <div className="relative bottom-48 text-4xl text-green-400">
         <h1>Url Shortner</h1>
       </div>
-      <div className=" relative bottom-12 flex space-x-8">
+      <div className=" relative bottom-12 flex flex-col md:flex-row space-y-12 justify-center items-center md:items-baseline md:space-x-8">
+      
         <input
-        className=" rounded-full pl-4"
+        className="w-full h-12 rounded-full pl-4"
           placeholder="Enter URL"
           onChange={(e) => setUrl(e.target.value)}
           value={url}
